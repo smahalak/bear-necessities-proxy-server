@@ -3,7 +3,11 @@
 // require the Express module
 const express = require("express");
 const axios = require("axios");
-require('dotenv').config();
+try {
+  require('dotenv').config();
+} catch (e) {
+  console.log('dotenv not installed. This is expected');
+}
 // Creates an new router object
 const router = express.Router();
 
